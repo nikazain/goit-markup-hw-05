@@ -409,11 +409,11 @@ img {
 }
 .container-info {
   display: block;
-  padding-left: 120px;
   margin-right: 120px;
 }
 .container-media {
   display: block;
+  padding: 0;
 }
 
 .logo-footer {
@@ -433,7 +433,6 @@ img {
 }
 .footer-desc {
   width: 264px;
-  line-height: 24px;
   color: var(--color-white);
 
   font-weight: 500;
@@ -445,6 +444,7 @@ img {
 .footer-list {
   display: flex;
   padding: 0;
+  margin: 0;
   align-items: center;
   gap: 16px;
   list-style: none;
@@ -535,7 +535,6 @@ img {
   column-gap: 24px;
 }
 .main-item {
-  border: 1px solid var(--cornflower, #e7e9fc);
   background: var(--white, #fff);
   display: flex;
   width: 360px;
@@ -559,9 +558,6 @@ img {
 }
 .article-link {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .article-title {
   padding: 0;
@@ -604,6 +600,14 @@ img {
 .article-link:hover .overlay,
 .article-link:focus .overlay {
   transform: translateX(0);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.article-link:hover,
+.article-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 /* Modal Window */
@@ -756,7 +760,6 @@ img {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
-  background-color: transparent;
   outline-offset: -1px;
   outline: transparent;
   padding: 8px 16px;
@@ -771,7 +774,7 @@ img {
   display: flex;
 }
 
-.modal-checkbox-input + .privacy-span {
+.modal-checkbox-input:checked + .privacy-svg {
   background-color: var(--color-ocean);
   border: none;
   fill: var(--color-cloud);
@@ -788,6 +791,7 @@ img {
   align-items: center;
   justify-content: center;
   fill: transparent;
+
   margin-right: 8px;
   cursor: pointer;
 
