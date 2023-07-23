@@ -815,15 +815,16 @@ img {
 
 .modal-input-comment:focus,
 .modal-input:focus {
+  fill: #4d5ae5;
   border-color: var(--color-iris);
 }
 
 .modal-svg:focus {
   fill: var(--color-iris);
 }
-/* .modal-input:focus + .modal-svg {
+.modal-input:focus + .modal-svg {
   fill: var(--color-iris);
-} */
+}
 
 .modal-div-comment {
   margin-bottom: 16px;
@@ -841,6 +842,7 @@ img {
   outline-offset: -1px;
   outline: transparent;
   padding: 8px 16px;
+  background-color: transparent;
 
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
